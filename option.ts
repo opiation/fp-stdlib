@@ -20,6 +20,10 @@ const none: None = Object.freeze({
   tag: "None",
 });
 
+function of<A>(value: A): Option<A> {
+  return some(value);
+}
+
 /**
  * Map function `f` onto an {@link Option} of type `A` to produce an `Option` of
  * type `B`, where `f` is a function that given a value of type `A`, produces a
@@ -33,5 +37,5 @@ function map<A, B>(f: (value: A) => B) {
     o.tag === "Some" ? some(f(o.value)) : none;
 }
 
-export { map, none, some };
+export { map, none, of, some };
 export type { None, Option, Some };
