@@ -1,0 +1,6 @@
+{
+  "name": "fp-stdlib",
+  "description": "A small Rust-inspired set of tools for handling nullish values consistently as well as ok versus error results",
+  "main": "mod.js",
+  "type": "module"
+}
